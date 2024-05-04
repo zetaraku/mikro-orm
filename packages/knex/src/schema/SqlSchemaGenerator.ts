@@ -671,7 +671,7 @@ export class SqlSchemaGenerator extends AbstractSchemaGenerator<AbstractSqlDrive
         const columns = this.platform.getJsonIndexDefinition(index);
         table.index(columns.map(column => this.knex.raw(column)), index.keyName, { indexType: 'unique' });
       } else {
-        table.unique(index.columnNames, { indexName: index.keyName });
+        table.unique(index.columnNames, { indexName: index.keyName, deferrable: index.deferMode });
       }
     } else if (index.expression) {
       this.helper.pushTableQuery(table, index.expression);

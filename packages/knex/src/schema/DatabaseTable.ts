@@ -3,6 +3,7 @@ import {
   type Configuration,
   DateTimeType,
   DecimalType,
+  type DeferMode,
   type Dictionary,
   type EntityKey,
   type EntityMetadata,
@@ -799,6 +800,7 @@ export class DatabaseTable {
     name?: string;
     type?: string;
     expression?: string;
+    deferMode?: DeferMode;
     options?: Dictionary;
   }, type: 'index' | 'unique' | 'primary') {
     const properties = Utils.unique(Utils.flatten(Utils.asArray(index.properties).map(prop => {
@@ -837,6 +839,7 @@ export class DatabaseTable {
       type: index.type,
       expression: index.expression,
       options: index.options,
+      deferMode: index.deferMode,
     });
   }
 
