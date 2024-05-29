@@ -266,7 +266,7 @@ For CLI to be able to access your database, you will need to create `mikro-orm.c
 
 > ORM configuration file can export the Promise, like: `export default Promise.resolve({...});`.
 
-To enable TypeScript support, add `useTsNode` flag to the `mikro-orm` section in your `package.json` file. By default, when `useTsNode` is not enabled, CLI will ignore `.ts` files, so if you want to oup-out of this behaviour, enable the `alwaysAllowTs` option. This would be useful if you want to use MikroORM with [Bun](https://bun.sh), which has TypeScript support out of the box.
+To enable TypeScript support, add `useTsNode` flag to the `mikro-orm` section in your `package.json` file. By default, when `useTsNode` is not enabled, CLI will ignore `.ts` files, so if you want to opt-out of this behaviour, enable the `alwaysAllowTs` option. This would be useful if you want to use MikroORM with [Bun](https://bun.sh), which has TypeScript support out of the box.
 
 > The `useTsNode` is a flag only for the CLI, it has no effect on your application.
 
