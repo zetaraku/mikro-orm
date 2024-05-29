@@ -250,7 +250,7 @@ MikroORM ships with a number of command line tools that are very helpful during 
 
 ```sh
 # install the CLI package first!
-$ yarn add @mikro-orm/cli
+$ npm install --save-dev @mikro-orm/cli
 
 # manually
 $ node node_modules/.bin/mikro-orm
